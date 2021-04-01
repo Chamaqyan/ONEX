@@ -1,0 +1,53 @@
+<div class="wrapper">
+    <div class="registor_form" >
+        <div class="auth_title">
+            <p>Change User data</p>
+        </div>
+        <form [formGroup]="changeUserData">
+            <div class="form-group w-50">
+                <input type="text" formControlName="firstName">
+                <label [activeLabel]="changeUserData.get('firstName').value">FirstName</label>
+                <span *ngIf="changeUserData.get('firstName').hasError('required') && changeUserData.get('firstName').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="lastName">
+                <label [activeLabel]="changeUserData.get('lastName').value">LastName</label>
+                <span *ngIf="changeUserData.get('lastName').hasError('required') && changeUserData.get('lastName').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="email">
+                <label [activeLabel]="changeUserData.get('email').value">Email</label>
+                <span *ngIf="changeUserData.get('email').hasError('required') && changeUserData.get('email').touched">*This field
+                    is required</span>
+            </div>
+            
+            <div class="form-group w-50">
+                <input type="password" formControlName="password">
+                <label [activeLabel]="changeUserData.get('password').value">Password </label>
+                <span *ngIf="changeUserData.get('password').hasError('required') && changeUserData.get('password').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="age">
+                <label [activeLabel]="changeUserData.get('age').value">Age</label>
+                <span *ngIf="changeUserData.get('age').hasError('required') && changeUserData.get('age').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="role">
+                <label [activeLabel]="changeUserData.get('role').value">Role</label>
+                <span *ngIf="changeUserData.get('role').hasError('required') && changeUserData.get('role').touched">*This field
+                    is required</span>
+            </div>
+          
+          
+            <div class="form_group_btn w-50">
+                <button class="btn" (click)="submit()">Change</button>
+            </div>
+            
+        </form>
+        
+    </div>
+</div>

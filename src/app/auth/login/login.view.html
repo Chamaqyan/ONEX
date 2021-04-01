@@ -1,0 +1,30 @@
+<div class="wrapper">
+    <div class="login_form" >
+        <div class="auth_title">
+            <p>Login</p>
+        </div>
+        <form [formGroup]="loginForm">
+            <div class="form-group w-50">
+                <input type="text" formControlName="login">
+                <label [activeLabel]="loginForm.get('login').value">Login</label>
+                <span *ngIf="loginForm.get('login').hasError('required') && loginForm.get('login').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="password" formControlName="password">
+                <label [activeLabel]="loginForm.get('password').value">Password</label>
+                <span *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">*This field
+                    is required</span>
+            </div>
+            <div class="registor">
+                <a routerLink='/auth/registor'>Register</a>
+            </div>
+          
+            <div class="form_group_btn w-50">
+                <button class="btn" (click)="submit()">Login in</button>
+            </div>
+            
+        </form>
+        
+    </div>
+</div>

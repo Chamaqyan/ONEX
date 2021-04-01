@@ -1,0 +1,33 @@
+<div class="admins-details">
+    <div class="data-table">
+        <table>
+            <tr>
+                <th>Email</th>
+                <th>User registration date</th>
+                <th *ngIf = "userAuth.role == 'admin'">Actions</th>
+            </tr>
+            <tr class="bord-color" *ngFor=" let user of this.mainService.users;let i = index">
+                <td>
+                    <p>{{user.email}}</p>
+                </td>
+                <td>
+                    <p>{{user.firstName}}</p>
+                </td>
+                <td *ngIf = "userAuth.role == 'admin'">
+                    <span>{{user.role}}</span>
+                    <i class="material-icons" (click)="deletUser(i)">
+                        delete_forever
+                    </i>
+                    <i class="material-icons" (click)="openModaleChangeUser(user,i)">
+                        person_add
+                    </i>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="add-admin cursor-pointer">
+        <i class="material-icons" (click)="openModale()">
+            person_add
+        </i>
+    </div>
+</div>

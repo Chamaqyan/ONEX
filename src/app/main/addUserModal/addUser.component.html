@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <div class="registor_form" >
+        <div class="auth_title">
+            <p>Registor</p>
+        </div>
+        <form [formGroup]="adduser">
+            <div class="form-group w-50">
+                <input type="text" formControlName="firstName">
+                <label [activeLabel]="adduser.get('firstName').value">FirstName</label>
+                <span *ngIf="adduser.get('firstName').hasError('required') && adduser.get('firstName').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="lastName">
+                <label [activeLabel]="adduser.get('lastName').value">LastName</label>
+                <span *ngIf="adduser.get('lastName').hasError('required') && adduser.get('lastName').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="email">
+                <label [activeLabel]="adduser.get('email').value">Email</label>
+                <span *ngIf="adduser.get('email').hasError('required') && adduser.get('email').touched">*This field
+                    is required</span>
+            </div>
+            
+            <div class="form-group w-50">
+                <input type="password" formControlName="password">
+                <label [activeLabel]="adduser.get('password').value">Password </label>
+                <span *ngIf="adduser.get('password').hasError('required') && adduser.get('password').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="password" formControlName="passwordConfirm">
+                <label [activeLabel]="adduser.get('passwordConfirm').value">Password-Confirm </label>
+                <span *ngIf="adduser.get('passwordConfirm').hasError('required') && adduser.get('passwordConfirm').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="age">
+                <label [activeLabel]="adduser.get('age').value">Age</label>
+                <span *ngIf="adduser.get('age').hasError('required') && adduser.get('age').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="role">
+                <label [activeLabel]="adduser.get('role').value">Role</label>
+                <span *ngIf="adduser.get('role').hasError('required') && adduser.get('role').touched">*This field
+                    is required</span>
+            </div>
+          
+          
+            <div class="form_group_btn w-50">
+                <button class="btn" (click)="submit()">Registor</button>
+            </div>
+            
+        </form>
+        
+    </div>
+</div>

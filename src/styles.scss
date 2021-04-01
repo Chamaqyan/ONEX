@@ -1,1 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+html, body { height: 100%; margin: 0;padding: 0;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 20px 0px;
+    label {
+        left: 24px;
+        top: 15px;
+        font-size: 15px;
+        position: absolute;
+        transition: 0.3s;
+        background: white;
+        color: #453258;
+    }
+    input {
+        padding: 15px 10px;
+        transition: 0.3s;
+        border-radius: 5px;
+        box-sizing: border-box;
+        border: 1px solid #453258;
+        outline: none;
+        color: #453258;
+        background-color: transparent;
+        &:focus + label{
+            top: -10px;
+        }
+    }
+    span {
+        position: absolute;
+        color: red;
+        font-size: 10px;
+        bottom: -20px;
+    }
+    .active-label {
+        top: -10px;
+    }
+}
+
+.w-50{
+    width: 50%;
+}
+
+.data-table {
+    background-color: white;
+    border-radius: 5px;
+    margin:10px 0;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        tr {
+            padding: 8px;
+            th {
+                color: rgba(0, 0, 0, 0.54);
+                font-size: 12px;
+                font-weight: 600;
+                padding: 10px;
+            }
+            td {
+                padding: 5px 0px;
+                margin: 0px 8px;
+                max-width: 180px;
+                border-bottom: 1px solid #8080803d;
+                p {
+                    cursor: pointer;
+                    padding: 10px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    // font-weight: 600;
+                    color: rgba(0, 0, 0, 0.87);
+                    font-size: 14px;
+                    margin: 0px;
+                }
+                i {
+                    cursor: pointer;
+                    font-size: 24px;
+                    color: #f44336;
+                }
+            }
+        }
+        .bord-color {
+            border-bottom: 1px solid #00000030;
+        }
+    }
+}
+
+
+ 
+ 
+ 
+ 
+
+ 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

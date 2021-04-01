@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <div class="registor_form" >
+        <div class="auth_title">
+            <p>Registor</p>
+        </div>
+        <form [formGroup]="registorForm">
+            <div class="form-group w-50">
+                <input type="text" formControlName="firstName">
+                <label [activeLabel]="registorForm.get('firstName').value">FirstName</label>
+                <span *ngIf="registorForm.get('firstName').hasError('required') && registorForm.get('firstName').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="lastName">
+                <label [activeLabel]="registorForm.get('lastName').value">LastName</label>
+                <span *ngIf="registorForm.get('lastName').hasError('required') && registorForm.get('lastName').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="email">
+                <label [activeLabel]="registorForm.get('email').value">Email</label>
+                <span *ngIf="registorForm.get('email').hasError('required') && registorForm.get('email').touched">*This field
+                    is required</span>
+            </div>
+            
+            <div class="form-group w-50">
+                <input type="password" formControlName="password">
+                <label [activeLabel]="registorForm.get('password').value">Password </label>
+                <span *ngIf="registorForm.get('password').hasError('required') && registorForm.get('password').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="password" formControlName="passwordConfirm">
+                <label [activeLabel]="registorForm.get('passwordConfirm').value">Password-Confirm </label>
+                <span *ngIf="registorForm.get('passwordConfirm').hasError('required') && registorForm.get('passwordConfirm').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="age">
+                <label [activeLabel]="registorForm.get('age').value">Age</label>
+                <span *ngIf="registorForm.get('age').hasError('required') && registorForm.get('age').touched">*This field
+                    is required</span>
+            </div>
+            <div class="form-group w-50">
+                <input type="text" formControlName="role">
+                <label [activeLabel]="registorForm.get('role').value">Role</label>
+                <span *ngIf="registorForm.get('role').hasError('required') && registorForm.get('role').touched">*This field
+                    is required</span>
+            </div>
+          
+          
+            <div class="form_group_btn w-50">
+                <button class="btn" (click)="submit()">Registor</button>
+            </div>
+            
+        </form>
+        
+    </div>
+</div>
